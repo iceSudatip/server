@@ -1,4 +1,5 @@
 const functions = require('firebase-functions');
+
 var express = require('express');
 var app = express();
 var router = express.Router();
@@ -6,6 +7,7 @@ var bodyParser = require('body-parser');
 var firebase = require('firebase');
 var cors = require('cors');
 app.use(cors());
+
 var config = {
     apiKey: "AIzaSyChYUax_htKiqj7b2xCSDJ7Jv-pSYQrOtk",
     authDomain: "client-server-65a8b.firebaseapp.com",
@@ -27,6 +29,7 @@ router.route('/lipsticks')
         var lipstick_brand = req.body.brand;
         var lipstick_id = req.body.id;
         var lipstick_price = req.body.price;
+        var lipstick_number = req.body.lipstick_number;
         
         // bears.push(bear);
        
